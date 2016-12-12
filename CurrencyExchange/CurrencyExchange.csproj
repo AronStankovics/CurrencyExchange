@@ -237,7 +237,6 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Controller\currencyexchangecontroller.js" />
-    <Content Include="Scripts\Controller\rickshawcontroller.js" />
     <Content Include="Scripts\d3.v3.js" />
     <Content Include="Scripts\d3.v3.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />

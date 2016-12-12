@@ -37,9 +37,6 @@ namespace CurrencyExchange
             bundles.Add(new ScriptBundle("~/bundles/rickshaw").Include(
                        "~/Scripts/d3.v3.min.js",
                        "~/Scripts/rickshaw.min.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/rickshawcontroller").Include(
-                        "~/Scripts/Controller/rickshawcontroller.js"));
         }
     }
 }
