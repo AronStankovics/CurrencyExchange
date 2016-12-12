@@ -74,7 +74,7 @@
     }
     return currencyManager;
 }]).controller('CurrencyExchangeController', ["$scope", "Currency", "CurrencyList", "currencyManager", function ($scope, Currency, CurrencyList, currencyManager) {
-    var _exchangerateURL = "http://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml";
+    var _exchangerateURL = "/Home/GetCurrencyXml";
 
     init = function ()  
     {
