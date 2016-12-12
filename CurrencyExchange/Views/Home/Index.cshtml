@@ -1,0 +1,24 @@
+﻿@{ 
+    ViewBag.Title = "Currency Exchange";
+}
+
+<div id="content" ng-controller="CurrencyExchangeController" >
+    <div class="currency">
+        Source:
+        <select ng-model="SourceCurrencyList" ng-options="curr.name for curr in currencies track by curr.rate"></select>
+    </div>
+    <div class="currency">
+        Target:
+        <select ng-model="TargetCurrencyList" ng-options="curr.name for curr in currencies track by curr.rate"></select>
+    </div>
+    Exchange rate: {{1 / (SourceCurrencyList.rate / TargetCurrencyList.rate) | number: 4}}
+
+    <div id="chart_container">
+      <div id="chart">
+      </div>
+      <div id="legend_container">
+         <div id="smoother" title="Smoothing"></div>
+         <div id="legend"></div>
+      </div>
+    </div>
+</div>
