@@ -125,7 +125,9 @@
         );
     }
 
-   displayGraph = function(data, currencyName) {
+    displayGraph = function (data, currencyName) {
+        var min = Math.min.apply(null, data.map(function (o) { return o.y; }));
+        var max = Math.max.apply(null, data.map(function (o) { return o.y; }));
         var graph = new Rickshaw.Graph({
             element: document.querySelector("#chart"),
             width: 960,
@@ -136,7 +138,8 @@
                 color: '#4682b4',
                 name: currencyName
             }],
-            min: Math.min.apply(null, data.map(function (o) { return o.y; }))
+            min: min - (max - min) * 0.1,
+            max: max + (max - min) * 0.1
         });
 
         graph.render();
